@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#eef1ec">
+    <meta name="description" content="Расчёт стоимости проектной и рабочей документации по нормативам Минстроя России.">
+    <meta name="robots" content="noindex">
+    <title>Стоимость проектных работ</title>
+    <script type="module" crossorigin src="./assets/index-08T7He5v.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-PwxVGVqS.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="page-width header-inner">
+        <div class="wordmark"><span class="mark" aria-hidden="true"></span>Калькулятор проектирования</div>
+        <a class="header-link" href="#sources">Нормативная база</a>
+      </div>
+    </header>
+
+    <main class="page-width">
+      <div class="page-heading">
+        <h1>Стоимость проектных работ</h1>
+        <p>По нормативам Минстроя России для объектов жилищно-гражданского назначения.</p>
+      </div>
+      <noscript><p>Для расчёта включите JavaScript в браузере.</p></noscript>
+      <div class="calculator">
+        <form id="calculator-form" class="inputs" novalidate>
+          <section class="input-group" aria-labelledby="object-heading">
+            <h2 id="object-heading">Объект</h2>
+            <label class="field">
+              <span>Тип объекта</span>
+              <select id="object"></select>
+            </label>
+            <div class="field-pair">
+              <div class="field">
+                <label id="indicator-label" for="indicator">Площадь, м²</label>
+                <input id="indicator" value="120" inputmode="decimal" autocomplete="off" aria-describedby="indicator-hint" required>
+                <small id="indicator-hint"></small>
+              </div>
+              <label class="field">
+                <span>Период расчёта</span>
+                <select id="period"></select>
+              </label>
+            </div>
+          </section>
+
+          <section class="input-group" aria-labelledby="work-heading">
+            <h2 id="work-heading">Состав работ</h2>
+            <fieldset class="stage-field">
+              <legend>Вид документации</legend>
+              <div id="stages" class="stage-options"></div>
+            </fieldset>
+            <details class="section-picker">
+              <summary>
+                <span>Разделы документации</span>
+                <span id="sections-count" class="selection-count"></span>
+              </summary>
+              <div class="section-picker-body">
+                <label class="check-option check-all">
+                  <input type="checkbox" id="select-all">
+                  <span>Выбрать все разделы</span>
+                </label>
+                <div id="sections" class="sections-grid"></div>
+              </div>
+            </details>
+            <label class="field">
+              <span>Корректирующий коэффициент</span>
+              <select id="adjustment" aria-describedby="adjustment-hint"></select>
+              <small id="adjustment-hint" hidden></small>
+            </label>
+          </section>
+        </form>
+
+        <aside class="receipt" aria-labelledby="result-heading">
+          <div class="receipt-top">
+            <h2 id="result-heading">Итог без НДС</h2>
+            <div id="total" class="total"></div>
+            <p id="result-note" class="result-note"></p>
+          </div>
+          <div class="receipt-body">
+            <section aria-labelledby="breakdown-heading">
+              <h3 id="breakdown-heading">Расшифровка расчёта</h3>
+              <div id="breakdown"></div>
+            </section>
+            <section id="sources" class="sources" aria-labelledby="sources-heading">
+              <h3 id="sources-heading">Нормативные источники</h3>
+              <ul id="source-list"></ul>
+            </section>
+            <button id="print" type="button" class="print-button" disabled>Печать / PDF</button>
+          </div>
+        </aside>
+      </div>
+      <div id="announcement" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
+    </main>
+  </body>
+</html>
