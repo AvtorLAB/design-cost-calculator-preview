@@ -7,8 +7,8 @@
     <meta name="description" content="Расчёт стоимости проектной и рабочей документации по нормативам Минстроя России.">
     <meta name="robots" content="noindex">
     <title>Стоимость проектных работ</title>
-    <script type="module" crossorigin src="./assets/index-08T7He5v.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-PwxVGVqS.css">
+    <script type="module" crossorigin src="./assets/index-BQ3N17sW.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CaTj2OSI.css">
   </head>
   <body>
     <header class="header">
@@ -87,7 +87,14 @@
               <h3 id="sources-heading">Нормативные источники</h3>
               <ul id="source-list"></ul>
             </section>
-            <button id="print" type="button" class="print-button" disabled>Печать / PDF</button>
+            <div class="receipt-actions">
+              <button id="save" type="button" class="save-button" disabled>Сохранить расчёт</button>
+              <button id="print" type="button" class="print-button" disabled>Печать / PDF</button>
+              <p class="save-status" id="save-status" role="status" aria-atomic="true">
+                <span id="save-check" class="save-check" aria-hidden="true" hidden></span>
+                <span id="save-message">Сохранение в этом браузере</span>
+              </p>
+            </div>
           </div>
         </aside>
       </div>
